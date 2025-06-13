@@ -1,0 +1,7 @@
+# Ignore CF lock or temp files
+*.lck
+*.class
+*.log
+.DS_Store
+.vscode/
+.idea/
