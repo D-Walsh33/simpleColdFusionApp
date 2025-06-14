@@ -1,27 +1,42 @@
-# simpleColdFusionApp
+# ColdFusion RSVP Web Application
 
-This is for practicing ColdFusion
+![Simple RSVP Form](screenshots/rsvpForm.png)
 
-## RSVP WEB APP
+This is a simple RSVP web application built with Adobe ColdFusion and Microsoft Access. It allows users to RSVP to an event, and provides an admin dashboard for viewing and filtering submissions. Designed as a portfolio project to demonstrate form handling, database integration, and dynamic filtering in ColdFusion.
 
-🧱 Basic Features (Phase 1)
-Public RSVP Form
-Guests enter: name, email, number of guests, and comments.
+## 🧠 Features
 
-Form Submission
-Submissions are saved to a database.
+- Submit RSVP form with validation
+- Store entries in an Access database
+- Admin dashboard to view all submissions
+- Filter RSVPs by date range
+- Total guest count calculation
+- Clear filter option
+- Styled with custom CSS
 
-Confirmation Page
-A thank-you message is displayed after submission.
+## 🛠 Tech Stack
 
-Admin View Page
-A simple page that shows a list of all RSVPs.
+- **Backend:** Adobe ColdFusion (CFML)
+- **Database:** Microsoft Access (connected via ODBC)
+- **Frontend:** HTML, CSS
+- **Deployment:** Local development via ColdFusion Server (Lucee or Adobe CF)
 
-📊 Database Table: rsvps
-Field Type Description
-id INT (PK) Auto-increment ID
-name VARCHAR Guest name
-email VARCHAR Guest email
-guest_count INT Number of additional guests
-comments TEXT Optional message
-submitted_at DATETIME Timestamp of RSVP
+## 📁 File Structure
+
+```
+rsvp-app/
+│
+├── index.cfm         # User-facing RSVP form
+├── submit.cfm        # Handles form submission, validation, and DB insert
+├── thanks.cfm        # Confirmation page after successful RSVP
+├── admin.cfm         # Admin dashboard with RSVP list, filters, and total guests
+├── styles.css        # Custom CSS for layout and design
+├── rsvps.accdb       # Microsoft Access database file
+├── /screenshots/     # (Optional) Folder for screenshots used in README
+```
+
+![Succesful RSVP](screenshots/SuccessfulInsert.png)
+
+![Error on Submission](screenshots/errorExample.png)
+
+![Admin Page](screenshots/Admin.png)
