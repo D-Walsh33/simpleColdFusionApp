@@ -1,42 +1,82 @@
-# ColdFusion RSVP Web Application
+# 🎉 ColdFusion RSVP Web Application
 
-![Simple RSVP Form](screenshots/rsvpForm.png)
+This is a simple RSVP tracking system built using **Adobe ColdFusion** and **Microsoft Access**. It allows users to submit RSVP information through a form, and provides an admin dashboard to review submissions, filter by date, and view total guest counts.
 
-This is a simple RSVP web application built with Adobe ColdFusion and Microsoft Access. It allows users to RSVP to an event, and provides an admin dashboard for viewing and filtering submissions. Designed as a portfolio project to demonstrate form handling, database integration, and dynamic filtering in ColdFusion.
+Designed as a beginner-friendly portfolio project to demonstrate:
+
+- ColdFusion form processing
+- Server-side validation
+- Database interaction (ODBC + Access)
+- Admin filtering and reporting
+- Basic web styling
+
+---
 
 ## 🧠 Features
 
-- Submit RSVP form with validation
-- Store entries in an Access database
-- Admin dashboard to view all submissions
-- Filter RSVPs by date range
-- Total guest count calculation
-- Clear filter option
-- Styled with custom CSS
+- ✅ RSVP form with field validation
+- ✅ Data storage in Access database
+- ✅ Admin dashboard with RSVP list
+- ✅ Date range filters (with default values)
+- ✅ Total guest count display
+- ✅ "Clear Filters" button
+- ✅ Basic styling with custom CSS
 
-## 🛠 Tech Stack
+---
 
-- **Backend:** Adobe ColdFusion (CFML)
-- **Database:** Microsoft Access (connected via ODBC)
-- **Frontend:** HTML, CSS
-- **Deployment:** Local development via ColdFusion Server (Lucee or Adobe CF)
+## 🚀 Getting Started
 
-## 📁 File Structure
+### 1. Clone the Repository
 
+```bash
+git clone https://github.com/your-username/rsvp-app.git
 ```
-rsvp-app/
-│
-├── index.cfm         # User-facing RSVP form
-├── submit.cfm        # Handles form submission, validation, and DB insert
-├── thanks.cfm        # Confirmation page after successful RSVP
-├── admin.cfm         # Admin dashboard with RSVP list, filters, and total guests
-├── styles.css        # Custom CSS for layout and design
-├── rsvps.accdb       # Microsoft Access database file
-├── /screenshots/     # (Optional) Folder for screenshots used in README
-```
+
+### 2. Set Up in ColdFusion
+
+Move the project into your ColdFusion web root directory:
+
+- **Adobe ColdFusion**:
+  `C:\ColdFusion2023\cfusion\wwwroot\rsvp-app\`
+
+- **Lucee**:
+  `C:\lucee\tomcat\webapps\rsvp-app\`
+
+### 3. Create the Datasource
+
+In your **ColdFusion Administrator**:
+
+- Go to: **Data Sources** → **ODBC Socket**
+- Name: `RSVPAccessDB`
+- Path: Point it to the included `rsvps.accdb` file
+
+### 4. Run the Application
+
+- Open your browser and visit:
+
+  - `http://localhost:8500/rsvp-app/index.cfm` to view the RSVP form
+  - `http://localhost:8500/rsvp-app/admin.cfm` to access the admin dashboard
+
+---
+
+## 📸 Screenshots
+
+### RSVP Form
+
+> Screenshot of the user-facing RSVP form.
+
+![Simple RSVP Form](screenshots/rsvpForm.png)
+
+### Admin Dashboard
+
+> Screenshot of the admin view showing filtered RSVP data and guest totals.
+
+![Admin Page](screenshots/Admin.png)
+
+> Screenshot of a successful RSVP.
 
 ![Succesful RSVP](screenshots/SuccessfulInsert.png)
 
-![Error on Submission](screenshots/errorExample.png)
+> Screenshot of an unsuccessful RSVP.
 
-![Admin Page](screenshots/Admin.png)
+> ![Error on Submission](screenshots/errorExample.png)
